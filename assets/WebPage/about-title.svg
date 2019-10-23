@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="226" viewBox="0 0 1440 226">
+    <defs>
+        <radialGradient id="b" cx="52.14%" r="645.414%" fx="52.14%" fy="50%" gradientTransform="scale(.15684 1) rotate(1.717 1.923 94.009)">
+            <stop offset="0%" stop-color="#7163FF" stop-opacity=".591"/>
+            <stop offset="100%" stop-color="#CFCCF0"/>
+        </radialGradient>
+        <path id="a" d="M0 0h1441v159.53C1200.833 203.842 960.667 226 720.5 226 480.333 226 240.167 203.843 0 159.53V0z"/>
+        <linearGradient id="c" x1="-3.811%" x2="98.756%" y1="-7.498%" y2="100%">
+            <stop offset="0%" stop-color="#7163FF"/>
+            <stop offset="100%" stop-color="#CFCCF0"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-1)">
+        <mask id="d" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="url(#b)" opacity=".499" xlink:href="#a"/>
+        <circle cx="1386.5" cy="165.5" r="89.5" stroke="url(#c)" stroke-width="2" mask="url(#d)" opacity=".553" transform="rotate(45 1386.5 165.5)"/>
+        <circle cx="21.5" cy="-42.112" r="152" stroke="url(#c)" stroke-width="2" mask="url(#d)" opacity=".553" transform="rotate(45 21.5 -42.112)"/>
+        <circle cx="2" cy="-40" r="152" stroke="url(#c)" stroke-width="2" mask="url(#d)" opacity=".553" transform="rotate(45 2 -40)"/>
+    </g>
+</svg>

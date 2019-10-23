@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="667" style="background:#030420" viewBox="0 0 375 667">
+    <defs>
+        <linearGradient id="a" x1="4.002%" y1="4.002%" y2="100%">
+            <stop offset=".063%" stop-color="#6663FF"/>
+            <stop offset="30.221%" stop-color="#B787F4"/>
+            <stop offset="67.081%" stop-color="#F891F1"/>
+            <stop offset="85.012%" stop-color="#FFB9FE"/>
+            <stop offset="100%" stop-color="#FFDFFD"/>
+        </linearGradient>
+        <filter id="b" width="176.1%" height="176.1%" x="-38.1%" y="-38.1%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="50"/>
+        </filter>
+        <filter id="c" width="176.1%" height="176.1%" x="-38.1%" y="-38.1%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="50"/>
+        </filter>
+        <linearGradient id="d" x1="50%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%" stop-opacity="0"/>
+            <stop offset="100%"/>
+        </linearGradient>
+        <linearGradient id="e" x1="50%" x2="50%" y1="100%" y2="0%">
+            <stop offset="0%" stop-opacity="0"/>
+            <stop offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-173)">
+        <circle cx="470" cy="485" r="197" fill="url(#a)" filter="url(#b)" opacity=".12"/>
+        <circle cx="197" cy="209" r="197" fill="url(#a)" filter="url(#c)" opacity=".166"/>
+        <path fill="url(#d)" d="M174 0h379v324H174z" opacity=".699"/>
+        <path fill="url(#e)" d="M173 456h379v208H173z" opacity=".699" transform="matrix(1 0 0 -1 0 1120)"/>
+    </g>
+</svg>

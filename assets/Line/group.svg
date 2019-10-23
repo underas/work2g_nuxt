@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="347" height="150" viewBox="0 0 347 150">
+    <defs>
+        <circle id="a" cx="172" cy="75" r="65"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path stroke="#EEA1C9" d="M127 27h-13.778l-10 13H20M127 119h-13.778l-10 13H20M107 70H93.222l-10 13H0M216 27h13.778l10 13H323M216 119h13.778l10 13H323M240 70h13.778l10 13H347"/>
+        <g>
+            <circle cx="172" cy="75" r="70" stroke="#FFF" stroke-opacity=".196" stroke-width="10"/>
+            <use stroke="#EEA1C9" stroke-opacity=".706" stroke-width="8" xlink:href="#a"/>
+            <use stroke="#FFF" stroke-opacity=".522" xlink:href="#a"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="198" height="80" viewBox="0 0 198 80">
+    <defs>
+        <filter id="a" width="113.9%" height="131.9%" x="-7%" y="-15.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="4"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.441703227 0 0 0 0 0.389615091 0 0 0 0 1 0 0 0 0.211456512 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="b" x1="0%" x2="102%" y1="44.749%" y2="55.356%">
+            <stop offset="0%" stop-color="#3023AE"/>
+            <stop offset="100%" stop-color="#C86DD7"/>
+        </linearGradient>
+        <filter id="c" width="118%" height="147.8%" x="-9%" y="-24%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="bevel" filter="url(#a)" transform="translate(-89 -27)">
+        <path stroke="#FFF" stroke-width="2" d="M101.495 65.675h41.344L148.632 38l8.995 47.25 13.518-40.5 4.732 29.7 13.872-20.131 9.239 26.206L213.063 38l4.738 54 8.385-27h44.305"/>
+        <path stroke="url(#b)" stroke-width="6" d="M16.228 38l38.116.675L60.137 11l8.995 47.25 13.518-40.5 4.732 29.7 13.872-20.131 9.238 26.206L124.568 11l4.738 54 8.385-27h45.17" filter="url(#c)" opacity=".544" transform="translate(88.495 27)"/>
+    </g>
+</svg>

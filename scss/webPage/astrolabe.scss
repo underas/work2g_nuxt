@@ -1,0 +1,913 @@
+@import "../_mixin.scss";
+
+.web-bg {
+    min-height: 100vh;
+  
+    &.overhidden {
+      height: 100vh;
+      overflow: hidden;
+    }
+}
+  
+  .space {
+    width: 100%;
+    height: 60px;
+  }
+  
+  .popup-mask {
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.82);
+    @include center;
+    //close icon
+    .cross-icon {
+      font-size: 40px;
+      cursor: pointer;
+      position: absolute;
+      z-index: 102;
+      top: 64px;
+      right: 68px;
+    }
+  }
+  
+  .v-tooltip__content { 
+    //width: 89px;
+    //height: 42px;
+    font-family: "Microsoft JhengHei", "Helvetica", sans-serif;
+    font-size: 16px;
+    border: solid 1px rgba(255, 255, 255, 0.45) !important;
+  }
+
+  .header {
+    padding: 32px;
+  
+    .header__img {
+      margin: 0 42px 0 0;
+    }
+  
+    .header__title {
+      font-size: 40px;
+      font-weight: 500;
+    }
+  
+    .header__share {
+      @include center;
+      height: 40px;
+      border-radius: 20px;
+      border: solid 1px #ffffff;
+      padding: 16px;
+      cursor: pointer;
+  
+      span {
+        margin-left: 8px;
+      }
+  
+      &:hover {
+        color: #ee6daf;
+        border: solid 1px #ee6daf;
+      }
+    }
+  }
+
+  .astrolabe {
+    .astrolabe__wrap {
+      padding: 0 16px 25px 32px;
+      .astrolabe__box{
+        max-width: 750px;
+        margin: 0 auto;
+      }
+      .user {
+        position: relative;
+        
+        .user__avatar {
+          img {
+            border: solid 1px #ffffff;
+            background: #312150;
+          }
+        } 
+        
+        .user__name {
+          font-size: 24px;
+        }
+        .user__birth {
+          opacity: 0.5;
+          font-size: 16px;
+        } 
+        .user__list {
+          @include center;
+          width: 120px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: rgba(255, 255, 255, 0.32);
+          cursor: pointer;
+          &:hover {
+            span {
+              opacity: 1;
+            }
+          }
+          span {
+            margin-left: 8px;
+            opacity: 0.5;
+          }
+        }
+  
+        .user__setup {
+          @include center;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: rgba(216, 216, 216, 0.4);
+          margin-left: 16px;
+          cursor: pointer;
+  
+          img {
+            width: 20px;
+            height: 20px;
+          }
+  
+          &:hover {
+            box-shadow: 0 0 11px 0 rgba(238, 161, 201, 0.5);
+            border: solid 1px rgba(255, 255, 255, 0.5);
+            background-color: rgba($color: #ee6daf, $alpha: 0.5);
+          }
+  
+          &.setupActive {
+            box-shadow: 0 0 11px 0 rgba(238, 161, 201, 0.5);
+            border: solid 1px rgba(255, 255, 255, 0.5);
+            background-color: rgba($color: #ee6daf, $alpha: 0.5);
+  
+            img {
+              content: url("../../assets/WebPage/close.png");
+              width: 16px;
+              height: 16px;
+            }
+          }
+        }
+  
+        //設定視窗
+        .user__setup__box {
+          position: absolute;
+          right: 0;
+          top: 70px;
+        }
+      }
+  
+      .pan__wrap {
+        margin-top: 50px;
+  
+        .swiper {
+          .swiper-container {
+            max-width: 670px;
+          }
+  
+          .swiper-slide {
+            @include center;
+          }
+  
+          .astrolabe__bg {
+            position: relative;
+            width: 480px;
+            height: 480px;
+            border-radius: 50%;
+            //opacity: 0.07;
+            background-image: radial-gradient(
+              circle at 50% 50%,
+              rgba(255, 255, 255, 0.07),
+              rgba(255, 255, 255, 0.07) 96%,
+              #ffffff
+            );
+  
+            .canvas-pan {
+              position: absolute;
+              top: 12px;
+              left: 12px;
+            }
+
+            .astrolabe__notice {
+              position: absolute;
+              z-index: 10;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              min-width: 120px;
+              height: 48px;
+              opacity: 0.9;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px 0 #9077bf;
+              background-color: rgba(255, 255, 255, 0.9);
+              text-align: center;
+              line-height: 48px;
+              font-size: 16px;
+              color: #322250;
+              padding: 0 8px;
+            }
+          }
+  
+          .swiper-pagination {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  
+    //個人星盤
+    .astrolabe__detail {
+      //min-height: 750px;
+      padding: 0 0 25px 0;
+      @include flex;
+      justify-content: center;
+  
+      .tab__box {
+        margin-right: 40px;
+        border-left: 4px solid #ee6daf;
+        // height: 640px;
+        height: 100%;
+        width: 56px;
+  
+        .tab {
+          @include center;
+          -webkit-writing-mode: vertical-lr;
+          writing-mode: vertical-lr;
+          font-size: 24px;
+          color: rgba($color: #ffffff, $alpha: 0.5);
+          width: 56px;
+          height: 164px;
+          border-top-right-radius: 16px;
+          border-bottom-right-radius: 16px;
+          background-color: rgba(255, 255, 255, 0.2);
+          cursor: pointer;
+  
+          &.tabActive {
+            color: rgba($color: #ffffff, $alpha: 1);
+            box-shadow: 3px 2px 20px 0 rgba(238, 161, 201, 0.66);
+            background-color: #ee6daf;
+          }
+        }
+      }
+  
+      .detail {
+        width: 545px;
+  
+        .interpret {
+          .interpret__astral {
+            padding: 24px 12px;
+            @include flex;
+            background-color: rgba($color: #ffffff, $alpha: 0.1);
+            border-radius: 8px;
+            flex-wrap: wrap;
+  
+            .astral__item {
+              @include center;
+              padding: 8px;
+              margin: 0 4px;
+              cursor: pointer;
+  
+              img {
+                width: 32px;
+                height: 32px;
+              }
+  
+              span {
+                font-size: 24px;
+                opacity: 0.4;
+              }
+  
+              &:hover {
+                box-shadow: inset 0 -3px 0 0 #ee6daf;
+  
+                span {
+                  opacity: 1;
+                }
+              }
+  
+              &.itemActive {
+                box-shadow: inset 0 -3px 0 0 #ee6daf;
+  
+                span {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+  
+          .interpret__box {
+            position: relative;
+            overflow: hidden;
+            margin-top: 40px;
+            border-radius: 8px;
+            background-color: rgba($color: #ffffff, $alpha: 0.34);
+            padding: 55px 36px;
+  
+            .interpret__title {
+              img {
+                width: 112px;
+                height: 112px;
+              }
+  
+              .interpret__text {
+                margin-left: 30px;
+                width: 112px;
+                font-size: 24px;
+                text-align: center;
+                border-bottom: 4px solid #ee6daf;
+              }
+            }
+  
+            .interpret__content {
+              margin-top: 34px;
+            }
+  
+            .interpret__bg {
+              position: absolute;
+              width: 350px;
+              opacity: 0.2;
+              right: -150px;
+              top: 30px;
+            }
+          }
+        }
+
+        .params {
+            .params__tabs {
+              @include center;
+              height: 70px;
+              border-radius: 8px;
+              background-color: rgba($color: #ffffff, $alpha: 0.1);
+              font-size: 24px;
+    
+              .params__tab__item {
+                position: relative;
+                padding: 0 30px;
+                box-shadow: inset -1px 0 0 0 rgba(255, 255, 255, 0.5);
+                opacity: 0.4;
+                cursor: pointer;
+    
+                &.tabItemActive {
+                  opacity: 1;
+    
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    width: 80px;
+                    height: 3px;
+                    background-color: #ee6daf;
+                    bottom: -8px;
+                    left: 15px;
+                  }
+                }
+              }
+            }
+    
+            .params__content {
+              overflow: hidden;
+              margin-top: 16px;
+              border: solid 1px #ffffff;
+              height: auto;
+              border-radius: 8px;
+              border: solid 1px #ffffff;
+              background-color: #19112b;
+    
+              .table {
+                width: 100%;
+                @include sub-title;
+                border-collapse: collapse;
+    
+                th,
+                td {
+                  text-align: center;
+                  vertical-align: middle;
+                  padding: 0 8px;
+                }
+    
+                th {
+                  height: 35px;
+                }
+    
+                td {
+                  line-height: 42px;
+                  height: 42px;
+                  border-right: solid 2px rgba($color: #ffffff, $alpha: 0.2);
+                }
+    
+                tr:last-child {
+                  border-bottom: solid 2px rgba($color: #ffffff, $alpha: 0.2);
+                }
+    
+                .table__title {
+                  background-color: #ee6daf;
+                }
+    
+                .table__content {
+                  &:nth-child(even) {
+                    background-color: rgba($color: #ffffff, $alpha: 0.2);
+                  }
+                }
+              }
+    
+              .planet-table {
+                td {
+                  &:nth-child(1) {
+                    @include center;
+                    padding: 0 8px;
+                  }
+                }
+    
+                img {
+                  width: 20px;
+                  height: 20px;
+                  margin-right: 10px;
+                }
+              }
+    
+              .palace-table {
+                .table__content {
+                  td {
+                    &:nth-child(3),
+                    &:nth-child(4),
+                    &:nth-child(5) {
+                      background-color: rgba(238, 161, 201, 0.31);
+                    }
+                  }
+                }
+              }
+    
+              .phase-table {
+                width: 100%;
+                font-size: 16px;
+                color: #ffffff;
+    
+                th,
+                td {
+                  text-align: center;
+                  vertical-align: middle;
+                  padding: 0 5px;
+                  border-right: solid 1px rgba($color: #ffffff, $alpha: 0.5);
+                }
+    
+                th {
+                  height: 40px;
+    
+                  &:nth-child(1) {
+                    border-bottom: solid 1px rgba($color: #ffffff, $alpha: 0.5);
+                  }
+    
+                  &:nth-child(13) {
+                    border-right: none;
+                  }
+                }
+    
+                td {
+                  height: 35px;
+                  background-color: rgba($color: #ffffff, $alpha: 0.28);
+                  //border-bottom: solid 1px rgba($color: #ffffff, $alpha: 0.5);
+                  &:nth-child(1) {
+                    background-color: #ee6daf;
+                    border-right: none;
+                  }
+    
+                  &:nth-child(13) {
+                    border-right: none;
+                  }
+    
+                  //合
+                  &.phase-neutral {
+                    background-color: #28cab3;
+                  }
+    
+                  //刑
+                  &.phase-ominous {
+                    background-color: #ff445b;
+                  }
+    
+                  //拱
+                  &.phase-lucky {
+                    background-color: #63c1ff;
+                  }
+                }
+    
+                .table__title {
+                  background-color: #ee6daf;
+                }
+    
+                .table__content {
+                  border-bottom: solid 1px rgba($color: #ffffff, $alpha: 0.5);
+    
+                  &:last-child {
+                    border-bottom: none;
+                  }
+                }
+              }
+    
+              .pattern-table {
+                td {
+                  border-right: none;
+                }
+              }
+    
+              .stats-table {
+                margin-top: 30px;
+    
+                td {
+                  border-right: none;
+                }
+              }
+            }
+          }
+      }
+    }
+  }
+  @media (min-width: 959px) and (max-width: 1263px) {
+}
+
+@media (max-width: 959px) {
+  .web-bg {
+    height: auto;
+  }
+  .popup-mask {
+    .cross-icon {
+      top: 16px;
+      right: 40px;
+    }
+  }
+  .header {
+    padding: 20px 16px;
+
+    .header__img {
+      margin: 0 32px 0 0;
+    }
+
+    .header__title {
+      font-size: 40px;
+    }
+  }
+  .astrolabe {
+    .astrolabe__wrap {
+      padding: 25px 16px;
+
+      .user {
+        padding: 0 25px;
+        max-width: inherit;
+      }
+    }
+
+    //個人星盤
+    .astrolabe__detail {
+      padding: 25px 16px;
+      flex-direction: column;
+      align-items: center;
+      //RWD Tab
+      .tab__box-m {
+        margin-bottom: 40px;
+        @include flex;
+        border-bottom: 4px solid #ee6daf;
+        height: 60px;
+        width: 550px;
+
+        .tab-m {
+          @include center;
+          font-size: 24px;
+          color: rgba($color: #ffffff, $alpha: 0.5);
+          height: 56px;
+          width: 164px;
+          border-top-right-radius: 16px;
+          border-top-left-radius: 16px;
+          background-color: rgba(255, 255, 255, 0.2);
+          cursor: pointer;
+
+          &.tabActive {
+            color: rgba($color: #ffffff, $alpha: 1);
+            box-shadow: 3px 2px 20px 0 rgba(238, 161, 201, 0.66);
+            background-color: #ee6daf;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .popup-mask {
+    .cross-icon {
+      width: 24px;
+      height: 24px;
+      top: 16px;
+      right: 16px;
+      // color: #19112b;
+      color: #ffffff;
+
+      &.setup {
+        color: #ffffff;
+      }
+    }
+  }
+  .header {
+    .header__img {
+      margin: 0 20px 0 0;
+      width: 20px;
+    }
+
+    .header__title {
+      font-size: 20px;
+    }
+
+    //RWD
+    .header__share-m {
+      cursor: pointer;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+  }
+  .astrolabe {
+    .astrolabe__wrap {
+      padding: 0;
+// max-width: inherit;
+      .user {
+        padding: 0 16px;
+
+        .user__name {
+          font-size: 18px;
+        }
+
+        .user__birth {
+          font-size: 12px;
+        }
+
+        //RWD
+        .user__list-m {
+          background-color: rgba(216, 216, 216, 0.4);
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          @include center;
+
+          img {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        .user__setup {
+          width: 30px;
+          height: 30px;
+
+          img {
+            width: 18px;
+            height: 18px;
+          }
+        }
+
+        //設定視窗
+        .user__setup__box {
+          position: relative;
+        }
+      }
+
+      .pan__wrap {
+        margin-top: 40px;
+
+        .swiper {
+          .astrolabe__bg {
+            width: 100vw;
+            height: 100vw;
+            // .canvas-pan {
+            //   position: absolute;
+            //   top: 12px;
+            //   left: 12px;
+            // }
+          }
+        }
+      }
+    }
+
+    //個人星盤
+    .astrolabe__detail {
+      padding: 30px 16px;
+      //RWD Tab
+      .tab__box-m {
+        margin-bottom: 25px;
+        height: 44px;
+        width: 100%;
+
+        .tab-m {
+          font-size: 16px;
+          height: 40px;
+          width: 100px;
+          // border-top-right-radius: 16px;
+          // border-top-left-radius: 16px;
+          &.tabActive {
+            //box-shadow: 3px 2px 20px 0 rgba(238, 161, 201, 0.66);
+          }
+        }
+      }
+
+      .detail {
+        width: 100%;
+
+        .interpret {
+          .interpret__astral {
+            padding: 12px 6px;
+
+            .astral__item {
+              padding: 4px 6px;
+
+              img {
+                width: 24px;
+                height: 24px;
+              }
+
+              span {
+                font-size: 18px;
+              }
+            }
+          }
+
+          .interpret__box {
+            margin-top: 24px;
+            padding: 30px 20px;
+
+            .interpret__title {
+              img {
+                width: 67px;
+                height: 67px;
+              }
+
+              .interpret__text {
+                margin-left: 25px;
+              }
+            }
+
+            .interpret__content {
+              margin-top: 34px;
+            }
+
+            .interpret__bg {
+              width: 250px;
+              right: -60px;
+              top: 100px;
+            }
+          }
+        }
+
+        .params {
+          .params__tabs {
+            height: 50px;
+            font-size: 16px;
+
+            .params__tab__item {
+              padding: 0 24px;
+
+              &.tabItemActive {
+                &::before {
+                  width: 60px;
+                  height: 3px;
+                  bottom: -6px;
+                  left: 10px;
+                }
+              }
+            }
+          }
+
+          .params__content {
+            .table {
+              th,
+              td {
+                padding: 0;
+              }
+
+              th {
+                height: 35px;
+              }
+
+              td {
+                line-height: 42px;
+                height: 42px;
+              }
+            }
+
+            .planet-table {
+              td {
+                &:nth-child(1) {
+                  padding: 0;
+                }
+              }
+
+              img {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+              }
+            }
+
+            .phase-table {
+              font-size: 14px;
+
+              th,
+              td {
+                padding: 0 5px;
+              }
+
+              th {
+                height: 35px;
+              }
+
+              td {
+                height: 26px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .header {
+    .header__img {
+      margin-right: 0;
+      width: 20px;
+    }
+
+    .header__title {
+      font-size: 16px;
+    }
+  }
+  .astrolabe {
+    .astrolabe__wrap {
+      .user {
+        padding: 0;
+
+        .user__name {
+          font-size: 16px;
+        }
+
+        .user__birth {
+          font-size: 10px;
+        }
+      }
+    }
+
+    //個人星盤
+    .astrolabe__detail {
+      padding: 0;
+
+      .detail {
+        width: 100%;
+
+        .interpret {
+          .interpret__astral {
+            .astral__item {
+              img {
+                width: 20px;
+                height: 20px;
+              }
+
+              span {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+
+        .params {
+          .params__tabs {
+            font-size: 16px;
+
+            .params__tab__item {
+              padding: 0 16px;
+
+              &.tabItemActive {
+                &::before {
+                  width: 50px;
+                }
+              }
+            }
+          }
+
+          .params__content {
+            .table {
+              th,
+              td {
+                padding: 0;
+              }
+            }
+
+            .planet-table {
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

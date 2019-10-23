@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="783" viewBox="0 0 375 783">
+    <defs>
+        <linearGradient id="a" x1=".702%" x2="87.773%" y1="0%" y2="78.412%">
+            <stop offset="0%" stop-color="#DE44C7"/>
+            <stop offset="100%" stop-color="#F66CA7"/>
+        </linearGradient>
+        <filter id="b" width="139%" height="138.8%" x="-19.5%" y="-19.4%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="21"/>
+        </filter>
+        <linearGradient id="c" x1=".702%" x2="87.773%" y1="0%" y2="78.412%">
+            <stop offset="0%" stop-color="#DE44C7"/>
+            <stop offset="100%" stop-color="#F66CA7"/>
+        </linearGradient>
+        <linearGradient id="d" x1=".702%" x2="87.773%" y1="0%" y2="78.412%">
+            <stop offset="0%" stop-color="#DE44C7"/>
+            <stop offset="100%" stop-color="#F66CA7"/>
+        </linearGradient>
+        <filter id="e" width="219.6%" height="218.7%" x="-59.8%" y="-59.4%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="21"/>
+        </filter>
+        <filter id="f" width="251.2%" height="250.1%" x="-75.6%" y="-75%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="13.2"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <ellipse cx="165.355" cy="215.5" fill="url(#a)" filter="url(#b)" opacity=".167" rx="161.355" ry="162.5"/>
+        <ellipse cx="176.966" cy="198.411" stroke="url(#c)" stroke-width=".6" opacity=".375" rx="127.715" ry="128.621"/>
+        <ellipse cx="288.307" cy="202.008" fill="url(#d)" filter="url(#e)" opacity=".24" rx="52.693" ry="53.067"/>
+        <ellipse cx="261.811" cy="189.116" fill="#FFF" filter="url(#f)" opacity=".26" rx="26.198" ry="26.384"/>
+    </g>
+</svg>

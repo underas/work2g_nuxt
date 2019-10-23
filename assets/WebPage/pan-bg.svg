@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="800" viewBox="0 0 1440 800">
+    <defs>
+        <linearGradient id="a" x1=".879%" x2="87.637%" y1="0%" y2="78.412%">
+            <stop offset="0%" stop-color="#DE44C7"/>
+            <stop offset="100%" stop-color="#F66CA7"/>
+        </linearGradient>
+        <filter id="b" width="139.1%" height="138.7%" x="-19.5%" y="-19.4%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="35"/>
+        </filter>
+        <linearGradient id="c" x1=".879%" x2="87.637%" y1="0%" y2="78.412%">
+            <stop offset="0%" stop-color="#DE44C7"/>
+            <stop offset="100%" stop-color="#F66CA7"/>
+        </linearGradient>
+        <linearGradient id="d" x1=".879%" x2="87.637%" y1="0%" y2="78.412%">
+            <stop offset="0%" stop-color="#DE44C7"/>
+            <stop offset="100%" stop-color="#F66CA7"/>
+        </linearGradient>
+        <filter id="e" width="219.7%" height="218.6%" x="-59.9%" y="-59.3%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="35"/>
+        </filter>
+        <filter id="f" width="251.3%" height="250%" x="-75.7%" y="-75%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="22"/>
+        </filter>
+        <linearGradient id="g" x1="10.828%" y1="17.294%" y2="76.53%">
+            <stop offset="0%" stop-color="#EBEAF2" stop-opacity=".331"/>
+            <stop offset="100%" stop-color="#FFF"/>
+        </linearGradient>
+        <filter id="h" width="128.6%" height="128.6%" x="-14.3%" y="-14.3%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="35"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(-48)">
+        <path d="M47 0h1440v800H47z"/>
+        <g transform="translate(0 129)">
+            <ellipse cx="268.606" cy="271" fill="url(#a)" filter="url(#b)" opacity=".167" rx="268.606" ry="271"/>
+            <ellipse cx="287.934" cy="242.5" stroke="url(#c)" opacity=".375" rx="212.605" ry="214.5"/>
+            <ellipse cx="473.282" cy="248.5" fill="url(#d)" filter="url(#e)" opacity=".24" rx="87.718" ry="88.5"/>
+            <ellipse cx="429.175" cy="227" fill="#FFF" filter="url(#f)" opacity=".26" rx="43.611" ry="44"/>
+        </g>
+        <circle cx="1285.5" cy="683.5" r="366.5" fill="url(#g)" filter="url(#h)" opacity=".165"/>
+    </g>
+</svg>

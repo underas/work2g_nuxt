@@ -1,0 +1,64 @@
+@import "variable";
+
+//按鈕樣式
+@mixin btn{
+    display: block;
+    background-color: $theme-color;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    color: $txt-color-1;
+    font-size: $font-size-2;
+    padding: 0;
+}
+
+@mixin title{
+    color: $txt-color-1;
+    font-size: $font-size-1;
+    font-weight: 500;
+}
+
+@mixin sub-title{
+    color: $txt-color-1;
+    font-size: $font-size-2;
+}
+
+@mixin sub-title-2{
+    color: $txt-color-3;
+    font-size: $font-size-2;
+}
+
+@mixin sub-title-3{
+    color: $txt-color-1;
+    font-size: $font-size-3;
+}
+
+@mixin sub-title-4{  //popup
+    color: $txt-color-2;
+    font-size: $font-size-2;
+}
+
+@mixin flex{
+    display: flex;
+    display: -webkit-flex;
+}
+
+@mixin center{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin lightbox {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  display: table;
+  transition: opacity .3s ease;
+}

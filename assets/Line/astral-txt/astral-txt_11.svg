@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
+    <defs>
+        <linearGradient id="a" x1="4.487%" y1="4.487%" y2="100%">
+            <stop offset=".063%" stop-color="#FA477C"/>
+            <stop offset="100%" stop-color="#FD694A"/>
+        </linearGradient>
+        <filter id="b" width="133.6%" height="133.6%" x="-16.8%" y="-16.8%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="37.825" cy="37.825" r="26.825" fill="url(#a)" filter="url(#b)"/>
+        <text fill="#FFF" font-family="PingFangTC-Medium, PingFang TC" font-size="28.613" font-weight="400">
+            <tspan x="24.193" y="48">升</tspan>
+        </text>
+        <circle cx="37.825" cy="37.825" r="27.777" stroke="#FFF" stroke-width="1.905"/>
+    </g>
+</svg>

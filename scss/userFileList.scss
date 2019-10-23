@@ -1,0 +1,167 @@
+@import "mixin";
+
+.header {
+  margin-top: 4px;
+  .header__title {
+    @include title;
+    margin-left: 10px;
+  }
+  .header__btn {
+    width: 68px;
+    height: 30px;
+    opacity: 0.5;
+    border-radius: 4px;
+    border: solid 1px #ffffff;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.list {
+  height: 55vh;
+  overflow: scroll;
+  .list__self__title {
+    @include sub-title-2;
+    margin: 0 0 10px 16px;
+  }
+  .list__friends__title {
+    @include sub-title-2;
+    margin: 20px 0 10px 16px;
+  }
+  .user-info {
+    height: 60px;
+    background-color: rgba($color: #ffffff, $alpha: 0.2);
+    .user-info__avatar {
+      img {
+        border: solid 1px #ffffff;
+        background: #312150;
+      }
+    }
+    &.Clicked {
+      //點按樣式
+      background-color: #ee6daf;
+    }
+    .user-info__name {
+      color: #ffffff;
+      font-size: 20px;
+    }
+    .user-info__birth {
+      color: #ffffff;
+      font-size: 12px;
+      opacity: 0.4;
+    }
+    .current {
+      @include sub-title-2;
+    }
+    .fa-check {
+      color: #ee6daf;
+    }
+  }
+  .btn-box {
+    &.self {
+      width: 60px;
+    }
+    &.friend {
+      width: 120px;
+      display: flex;
+    }
+    .btn {
+      display: block;
+      width: 60px;
+      height: 60px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 60px;
+      margin-left: 1px;
+      &.edit-btn {
+        background-color: #ee6daf;
+      }
+      &.del-btn {
+        background-color: #eea1c9;
+      }
+    }
+  }
+}
+
+.bottom {
+  .buttons__button {
+    @include center;
+    width: 160px;
+    height: 40px;
+    border-radius: 4px;
+    line-height: 40px;
+    text-align: center;
+    &.cancel {
+      color: #ee6daf;
+      border: solid 2px #ee6daf;
+    }
+    &.change {
+      color: #ffffff;
+      background-color: #ee6daf;
+      opacity: 0.5; 
+      &.canClick {
+        opacity: 1;
+      }
+    }
+    &.first {
+      width: 343px;
+    }
+  }
+}
+
+.nofriend {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    width: 75px;
+    height: 75px;
+  }
+  .note {
+    @include sub-title;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .add-btn {
+    width: 150px;
+    @include btn;
+  }
+}
+.new-friend{
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba($color: #ee6daf, $alpha: 0.5);
+
+  &.new-clicked{
+    color: #ffffff;
+  }
+}
+
+.popup {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  border-radius: 8px;
+  background-color: rgba($color: #eae5e5, $alpha: 0.8);
+  text-align: center;
+  line-height: 48px;
+  @include sub-title-4;
+  font-weight: 600;
+  padding: 16px;
+}
+
+@media (min-width: 375px) {
+  .list {
+    height: 65vh;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 0px;
+  }
+}
