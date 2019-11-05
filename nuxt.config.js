@@ -34,14 +34,22 @@ export default {
   /*
   ** Global CSS
   */
+  webfontloader: {
+    google: {
+      families: ['Lato:400,700'] //Loads Lato font with weights 400 and 700
+    }
+  },
   css: [
+    'swiper/dist/css/swiper.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/font-awesome',
-    '~plugins/vue-cookie',
+    {src:  '~plugins/vue-cookie', mode: 'client' },
+    {src:  '~/plugins/font-awesome', mode: 'client' },
+    {src: '~/plugins/vue-awesome-swiper.js', mode: 'client' }
+
   ],
   /*
   ** Nuxt.js modules
@@ -51,6 +59,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'nuxt-fontawesome',
+    'nuxt-webfontloader',
   ],
   /*
   ** Axios module configuration
